@@ -73,9 +73,5 @@
 ### Liên hệ
 Mọi thắc mắc hoặc góp ý xin liên hệ qua email: chatbotuit@gmail.com
 
-4. `cd ../BackEnd && npm start`
-5. Mở `http://localhost:3000`
-
-
 
 
