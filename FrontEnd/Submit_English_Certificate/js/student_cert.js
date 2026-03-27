@@ -151,7 +151,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
     if (!token) {
         alert('Bạn chưa đăng nhập. Chuyển về trang chủ...');
-        window.location.href = "https://chatbotuit.id.vn/";
+        window.location.href = "/";
         return;
     }
 

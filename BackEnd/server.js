@@ -14,8 +14,13 @@ const connectDB = require('../Database/connectDB');
 connectDB();
 
 // Middleware
+const corsOrigins = (process.env.CORS_ORIGIN || 'http://localhost:3000')
+  .split(',')
+  .map(origin => origin.trim())
+  .filter(Boolean);
+
 app.use(cors({
-  origin: 'https://chatbotuit.id.vn/',
+  origin: corsOrigins,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -79,6 +84,7 @@ app.get("/auth/google", passport.authenticate("google", { scope: ["profile", "em
 app.use("/api/auth", authRoutes);
 
 // Start server
-app.listen(3000, () => {
-  console.log('Server is running on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

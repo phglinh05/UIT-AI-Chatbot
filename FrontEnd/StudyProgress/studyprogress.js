@@ -148,7 +148,7 @@ function attachNavbarEvents(token, role) {
                 const token = localStorage.getItem("token");
                 if (!token) {
                     alert("Bạn chưa đăng nhập. Vui lòng đăng nhập lại!");
-                    window.location.href = "https://chatbotuit.id.vn/";
+                    window.location.href = "/";
                 } else {
                     window.location.href = "/api/student/academicstatistic";
                 }
@@ -161,7 +161,7 @@ function attachNavbarEvents(token, role) {
                 const token = localStorage.getItem("token");
                 if (!token) {
                     alert("Bạn chưa đăng nhập. Vui lòng đăng nhập lại!");
-                    window.location.href = "https://chatbotuit.id.vn/";
+                    window.location.href = "/";
                 } else {
                     window.location.href = "/api/student/schedule-optimize";
                 }
@@ -174,7 +174,7 @@ function attachNavbarEvents(token, role) {
                 const token = localStorage.getItem("token");
                 if (!token) {
                     alert("Bạn chưa đăng nhập. Vui lòng đăng nhập lại!");
-                    window.location.href = "https://chatbotuit.id.vn/";
+                    window.location.href = "/";
                 } else {
                     window.location.href = "/api/student/english-certificate";
                 }
@@ -187,7 +187,7 @@ function attachNavbarEvents(token, role) {
                 const token = localStorage.getItem("token");
                 if (!token) {
                     alert("Bạn chưa đăng nhập. Vui lòng đăng nhập lại!");
-                    window.location.href = "https://chatbotuit.id.vn/";  // Điều hướng đến trang đăng nhập
+                    window.location.href = "/";  // Điều hướng đến trang đăng nhập
                 } else {
                     window.location.href = "/api/student/profile";
                 }
@@ -201,7 +201,7 @@ function attachNavbarEvents(token, role) {
                 const token = localStorage.getItem("token");
                 if (!token) {
                     alert("Bạn chưa đăng nhập. Vui lòng đăng nhập lại!");
-                    window.location.href = "https://chatbotuit.id.vn/";  // Điều hướng đến trang đăng nhập
+                    window.location.href = "/";  // Điều hướng đến trang đăng nhập
                 } else {
                     // Nếu có token, điều hướng đến chatbot
                     window.location.href = "/api/student/chatbot?token=" + token;  // Điều hướng đến route chatbot
@@ -220,7 +220,7 @@ function attachNavbarEvents(token, role) {
                 }
 
                 // Gửi token kèm theo khi truy cập route được bảo vệ
-                fetch('https://chatbotuit.id.vn/api/student/stu_menu', {
+                fetch('/api/student/stu_menu', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -397,7 +397,7 @@ function attachNavbarEvents(token, role) {
                 }
 
                 // Gửi token kèm theo khi truy cập route được bảo vệ
-                fetch('https://chatbotuit.id.vn/api/admin/admin_menu', {
+                fetch('/api/admin/admin_menu', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -421,7 +421,7 @@ function attachNavbarEvents(token, role) {
                 const token = localStorage.getItem("token");
                 if (!token) {
                     alert("Bạn chưa đăng nhập. Vui lòng đăng nhập lại!");
-                    window.location.href = "https://chatbotuit.id.vn/";
+                    window.location.href = "/";
                 } else {
                     window.location.href = "/api/lecturer/profile";
                 }
@@ -434,7 +434,7 @@ function attachNavbarEvents(token, role) {
                 e.preventDefault();
                 if (!token) {
                     alert("Bạn chưa đăng nhập. Vui lòng đăng nhập lại!");
-                    window.location.href = "https://chatbotuit.id.vn/";
+                    window.location.href = "/";
                 } else {
                     window.location.href = "/api/lecturer/classlist";
                 }
@@ -451,7 +451,7 @@ function attachNavbarEvents(token, role) {
                 }
 
                 // Gửi token kèm theo khi truy cập route được bảo vệ
-                fetch('https://chatbotuit.id.vn/api/lecturer/lec_menu', {
+                fetch('/api/lecturer/lec_menu', {
                     method: 'GET',
                     headers: {
                         'Authorization': `Bearer ${token}`
@@ -475,7 +475,7 @@ function attachNavbarEvents(token, role) {
 
     if (!token) {
         alert("Vui lòng đăng nhập để xem thông tin");
-        window.location.href = "https://chatbotuit.id.vn/";
+        window.location.href = "/";
         return;
     }
 }
@@ -558,8 +558,8 @@ function StudentAcademicData(token) {
     // Kiểm tra nếu URL có query 
     if (urlParams.toString()) {
         const studentId = urlParams.get('student_id');
-        StudentAcademicDataUrl = `https://chatbotuit.id.vn/api/student/student-academic-data?student_id=${studentId}`;
-        GroupSemesterDataUrl = `https://chatbotuit.id.vn/api/student/group-by-semester-data?student_id=${studentId}`
+        StudentAcademicDataUrl = `/api/student/student-academic-data?student_id=${studentId}`;
+        GroupSemesterDataUrl = `/api/student/group-by-semester-data?student_id=${studentId}`
 
     } else {
         StudentAcademicDataUrl = `/api/student/student-academic-data`;

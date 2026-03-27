@@ -1,4 +1,12 @@
 {
+  "name": "uit-ai-chatbot",
+  "version": "1.0.0",
+  "private": true,
+  "main": "BackEnd/server.js",
+  "scripts": {
+    "start": "node BackEnd/server.js",
+    "start:backend": "node BackEnd/server.js"
+  },
   "dependencies": {
     "@faker-js/faker": "^9.8.0",
     "@tailwindcss/vite": "^4.1.7",

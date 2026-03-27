@@ -73,6 +73,30 @@
 ### 📫 Liên hệ
 Mọi thắc mắc hoặc góp ý xin liên hệ qua email: chatbotuit@gmail.com
 
+---
+
+### 🧪 Chạy localhost (không hardcode domain)
+
+Backend đã được chuyển sang dùng biến môi trường thay vì hardcode domain.
+
+Thêm các biến sau vào `.env`:
+
+- `PORT=3000`
+- `CORS_ORIGIN=http://localhost:3000`
+- `GOOGLE_CALLBACK_URL=http://localhost:3000/api/auth/google/callback`
+
+Nếu cần nhiều origin, dùng dấu phẩy:
+
+- `CORS_ORIGIN=http://localhost:3000,https://chatbotuit.id.vn`
+
+Chạy dự án:
+
+1. `npm install` (thư mục root)
+2. `cd BackEnd && npm install`
+3. `cd ../Database && npm install`
+4. `cd ../BackEnd && npm start`
+5. Mở `http://localhost:3000`
+
 
 
 

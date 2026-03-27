@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // Gửi token kèm theo khi truy cập route được bảo vệ
-      fetch("https://chatbotuit.id.vn/api/admin/admin_menu", {
+      fetch("/api/admin/admin_menu", {
         method: "GET",
         headers: {
           Authorization: `Bearer ${token}`,
