@@ -2,21 +2,21 @@
 
 ---
 
-## 🤖 UIT Chatbot - Trợ Lý Ảo Sinh Viên UIT     
+## UIT Chatbot - Trợ Lý Ảo Sinh Viên UIT     
 
 ---
 
-### 📋 Mô tả
+### Mô tả
 **UIT Chatbot** là hệ thống hỗ trợ học tập trực tuyến, đóng vai trò chính là cung cấp thông tin, trả lời các câu hỏi cơ bản, đồng thời hỗ trợ quản lý học tập cho sinh viên, giảng viên và quản trị viên.  
 
 ---
-### 📎 Liên kết liên quan
+### Liên kết liên quan
 - Link github: https://github.com/leehugw/NT208.P22.ANTT---LapTrinhUngDungWeb---Nhom6
 - Link phỏng vấn: https://drive.google.com/drive/folders/1A7zBmJWboaCbpEPWSTx2kR_WJhfrD_Pu + https://www.tiktok.com/@bleen_38katrin/video/7519168412912798994?lang=en
 - Link video demo tất cả chức năng: https://drive.google.com/drive/folders/1A7zBmJWboaCbpEPWSTx2kR_WJhfrD_Pu
 
 ---
-### 👥 Thành viên nhóm
+### Thành viên nhóm
 
 | Họ và Tên             | MSSV     |             |
 |-----------------------|----------|------------ |
@@ -27,7 +27,7 @@
 
 ---
 
-### ⚙️ Vai trò và chức năng hệ thống
+### Vai trò và chức năng hệ thống
 
 #### *1. Admin*
 - Quản lý toàn bộ hệ thống.
@@ -53,14 +53,14 @@
 - Sử dụng chatbot hỗ trợ cung cấp thông tin.
 ---
 
-### 🤖 Chatbot hỗ trợ
+### Chatbot hỗ trợ
 - Giải đáp các câu hỏi, thông tin cơ bản liên quan đến học tập.
 - Được tích hợp trực tiếp trên giao diện web, giúp sinh viên nhanh chóng tìm kiếm thông tin cần thiết.
 - Đưa ra các phương pháp cải thiện điểm cho sinh viên.
 
 ---
 
-### 🛠️ Công nghệ sử dụng
+### Công nghệ sử dụng
 
 | Thành phần  | Công nghệ                        |
 |-------------|----------------------------------|
@@ -70,30 +70,9 @@
 | Chatbot     | Ollama                           |
 
 ---
-### 📫 Liên hệ
+### Liên hệ
 Mọi thắc mắc hoặc góp ý xin liên hệ qua email: chatbotuit@gmail.com
 
----
-
-### 🧪 Chạy localhost (không hardcode domain)
-
-Backend đã được chuyển sang dùng biến môi trường thay vì hardcode domain.
-
-Thêm các biến sau vào `.env`:
-
-- `PORT=3000`
-- `CORS_ORIGIN=http://localhost:3000`
-- `GOOGLE_CALLBACK_URL=http://localhost:3000/api/auth/google/callback`
-
-Nếu cần nhiều origin, dùng dấu phẩy:
-
-- `CORS_ORIGIN=http://localhost:3000,https://chatbotuit.id.vn`
-
-Chạy dự án:
-
-1. `npm install` (thư mục root)
-2. `cd BackEnd && npm install`
-3. `cd ../Database && npm install`
 4. `cd ../BackEnd && npm start`
 5. Mở `http://localhost:3000`
 
